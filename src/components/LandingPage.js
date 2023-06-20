@@ -6,7 +6,6 @@ import Team from '../img/liv (12).jpeg';
 import FlipCard from './FlipCard';
 import ImageSlider from './ImageSlider';
 // import PanelComponent from './ImageSlider';
-import Footer from './Footer';
 import Footernew from './Footernew';
 import ReviewSection from './ReviewSection';
 import '../App.css'
@@ -60,9 +59,9 @@ function LandingPage(...images) {
       <FlipCard />
       <ImageSlider/>
       <ReviewSection />
-      {/*<Footer/>*/}
-      <Footernew></Footernew>
-      <Services/>
+
+      <Footernew />
+
     </div>
   )
 }
