@@ -28,7 +28,7 @@ const Carousel = ({ slides }) => {
             index === currentSlide ? 'active' : ''
           }`}
         >
-          <img src={slide.imagePath} style={{width:"100%",objectFit:"cover"}} alt={`Slide ${index + 1}`} />
+          <img src={slide.imagePath} style={{width:"100%"}} alt={`Slide ${index + 1}`} />
           <div className="carousel-caption">{slide.text}</div>
         </div>
       ))}

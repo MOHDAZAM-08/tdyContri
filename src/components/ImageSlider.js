@@ -24,16 +24,17 @@ function ImageSlider() {
   return (
     <div className='slider'>
        
-      <div style={{textAlign:"center",fontSize:"3rem", padding:"40px 10px 40px 10px",color:"white"}}>GALLARY</div>
-      <div className="ImageSlider">
+      <div className='recent-project' style={{textAlign:"center", padding:"100px 10px 40px 10px",color:"#103E58"}}>RECENT PROJECTS</div>
+      <div className='recent-under'></div>
+      <div className='ImageSlider'>
         {panels.map((panel, index) => (
           <div
             key={index}
             className={`panel ${activePanel === index ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${panel.image})`}}
+            style={{overFlow:"hidden" , backgroundImage:`url(${panel.image})`}}
             onClick={() => handleClick(index)}
           >
-            {/* <h3>{panel.title}</h3> */}
+           <h3>{panel.title}</h3> 
           </div>
         ))}
       </div>
