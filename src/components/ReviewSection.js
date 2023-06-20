@@ -5,10 +5,13 @@ import { useState } from 'react';
 import { MdArrowBackIosNew } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
 
-import img1 from '../img/liv1.jpeg';
-import img2 from '../img/liv2.jpeg';
-import img3 from '../img/liv3.jpeg';
-import img4 from '../img/liv4.jpeg';
+import img1 from '../img/men2.jpg';
+import img2 from '../img/men3.jpeg';
+import img3 from '../img/pro.jpg';
+import img4 from '../img/men3.jpeg';
+
+import forward from '../img/forward.png';
+import backward from '../img/backward.png';
 
 const ReviewSection = (props) => {
   const [index, setIndex] = useState(0);
@@ -62,18 +65,23 @@ const ReviewSection = (props) => {
   }
 
   return (
-    <div className="review-section">
-      <div className="review-button">
-        <button onClick={lefthandler}><MdArrowBackIosNew/></button>
-      </div>
+  <div className='review-yard'>
+  <div className='our-cust'>OUR CUSTOMERS <span className='review-head'>REVIEW</span></div>
+  <div className="review-section">
+    
+  <div className="review-button left">
+    <button onClick={lefthandler}><img className='left1' src={backward}></img></button>
+  </div>
 
-      <Card className="review-card" reviews={reviews[index]}></Card>
+  <Card className="review-card" reviews={reviews[index]}></Card>
 
-      <div className="review-button">
-        <button onClick={righthandler}><MdArrowForwardIos/></button>
-        {/* <button onClick={righthandler}>&#10233;</button> */}
-      </div>
-    </div>
+  <div className="review-button right">
+    <button onClick={righthandler}><img className='right1' src={forward} ></img></button>
+    {/* <button onClick={righthandler}>&#10233;</button> */}
+  </div>
+</div>
+  </div>
+  
   );
 };
 
